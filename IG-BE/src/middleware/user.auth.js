@@ -5,7 +5,7 @@ const verifyToken = (req, res, next) => {
   if (
     req.headers &&
     req.headers.authorization &&
-    req.headers.authorization.split(" ")[0] === "JWT"
+    req.headers.authorization.split(" ")[0] === "Bearer"
   ) {
     jwt.verify(
       req.headers.authorization.split(" ")[1],
@@ -13,27 +13,29 @@ const verifyToken = (req, res, next) => {
       async function (err, decode) {
         if (err) {
           req.user = undefined;
-          return next();
+          return res.status(404).send({
+            message: "Authentication Fail"
+          });
         }
 
-        console.log("decode", decode);
         try {
           const user = await User.findOne({
             _id: decode?.user_id,
           }).exec();
-          console.log("user",user);
           req.user = user;
+          next();
         } catch (err) {
           return res.status(500).send({
             message: err.message || "Internal server error",
           });
         }
-        next();
       }
     );
   } else {
     req.user = undefined;
-    next();
+    res.status(404).send({
+      message: "Authentication Fail"
+    });
   }
 };
 module.exports = verifyToken;

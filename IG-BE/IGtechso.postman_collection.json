@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "b7008af0-7355-4fe3-a9e8-546e76e8fd08",
+		"name": "IGtechso",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"xyz@gmail.com\",\r\n    \"Password\": \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/api/auth/login"
+			},
+			"response": []
+		},
+		{
+			"name": "registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"xyz\",\r\n    \"email\": \"xyz@gmail.com\",\r\n    \"Password\": \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/api/auth/registration"
+			},
+			"response": []
+		},
+		{
+			"name": "create review",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjY0ZjdlY2ExZTJlM2RiZGRiNTBlZDE5IiwiaWF0IjoxNzE2NDg1ODM4LCJleHAiOjE3MTY0ODk0Mzh9.1r8Eiw0wLz0dJrJwzqK0dWlJUdWOHStusi9MS8lLub4"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"image\": \"https://c8.alamy.com/comp/KWDTCW/rajwada-is-a-historical-palace-in-indore-city-india-KWDTCW.jpg\",\r\n    \"noOfStar\": \"3\",\r\n    \"title\": \"Title\",\r\n    \"noOfStudentWatched\": \"333\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/api/review/submit"
+			},
+			"response": []
+		},
+		{
+			"name": "findReviewById",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjY0ZjdlY2ExZTJlM2RiZGRiNTBlZDE5IiwiaWF0IjoxNzE2NDg1ODM4LCJleHAiOjE3MTY0ODk0Mzh9.1r8Eiw0wLz0dJrJwzqK0dWlJUdWOHStusi9MS8lLub4"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/api/review/getallreview"
+			},
+			"response": []
+		},
+		{
+			"name": "deleteReviewById",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjY0ZjdlY2ExZTJlM2RiZGRiNTBlZDE5IiwiaWF0IjoxNzE2NDg3NjYzLCJleHAiOjE3MTY0OTEyNjN9.ByBMVK26jnhA9xfSEevPp05D_whE7jfHeH5PCRijXLc"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:3000/api/review/deletereview/664f807a34ef1032a409b973"
+			},
+			"response": []
+		},
+		{
+			"name": "updateReviewById",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjY0ZjdlY2ExZTJlM2RiZGRiNTBlZDE5IiwiaWF0IjoxNzE2NDg3NjYzLCJleHAiOjE3MTY0OTEyNjN9.ByBMVK26jnhA9xfSEevPp05D_whE7jfHeH5PCRijXLc"
+					}
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"_id\": \"664f7ee01e2e3dbddb50ed1c\",\r\n            \"image\": \"https://c8.alamy.com/comp/KWDTCW/rajwada-is-a-historical-palace-in-indore-city-india-KWDTCW.jpg\",\r\n            \"noOfStar\": 4,\r\n            \"title\": \"Title\",\r\n            \"noOfStudentWatched\": 300\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/api/review/updatereview/664f7ee01e2e3dbddb50ed1c"
+			},
+			"response": []
+		}
+	]
+}

@@ -2,12 +2,15 @@ const express = require('express');
 const mongoose = require('mongoose');
 const envConfig = require('./src/config/env.config');
 const verifyToken = require('./src/middleware/user.auth');
+const cors = require('cors');
+
 const app = express();
 app.use(express.json());
 
 app.use(express.urlencoded({
-  extended: true
+    extended: true
 }));
+app.use(cors());
 
 //routes
 const review = require("./src/routers/reviews");

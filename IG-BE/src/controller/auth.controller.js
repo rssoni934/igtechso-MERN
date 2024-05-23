@@ -4,7 +4,6 @@ const crypto = require('crypto');
 
 const signUp = async (req, res) => {
     const { name, email, Password } = req.body;
-    console.log("req.body",req.body);
     try {
         let password = getHashedPassword(Password)
         const user = new Users({
@@ -17,6 +16,9 @@ const signUp = async (req, res) => {
         })
     } catch (err) {
         console.log("Error:", err);
+        return res.status(500).json({
+            error: err
+        })
     }
 }
 const signIn = async (req, res) => {
@@ -39,6 +41,9 @@ const signIn = async (req, res) => {
         
     } catch (err) {
         console.log("Error:", err);
+        return res.status(500).json({
+            error: err
+        })
     }
 }
 
