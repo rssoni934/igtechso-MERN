@@ -1,0 +1,17 @@
+.startBtn{
+    background-color: rgb(252,	242, 232);
+    color: #EF9E48;
+    border: none;
+}
+
+.startBtn:hover{
+    background-color: rgb(252,	242, 232);
+    color: #EF9E48;
+    border: none;
+}
+
+.startBtn:target{
+    background-color: rgb(252,	242, 232);
+    color: #EF9E48;
+    border: none;
+}

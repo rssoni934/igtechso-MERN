@@ -1,0 +1,40 @@
+.FeaturesSection {
+  margin: 0px 50px;
+  text-align: center;
+  width: 100%;
+  margin: 20px 0;
+}
+.featureheading {
+  color: orange;
+  font-size: 13px;
+  letter-spacing: 3px;
+  font-weight: 500;
+}
+.mainText {
+  margin: 0 0px 30px 0;
+  font-size: 30px;
+}
+.textSection {
+  padding: 15px 20px;
+  text-align: left;
+}
+.ratingSection {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+}
+.student {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 5px;
+  color: gray;
+  font-size: 14px;
+}
+
+.slick-active {
+  margin-right: 10px;
+}
+.slick-list{
+    height: 350px;
+}

@@ -1,0 +1,34 @@
+.featuresSection{
+    margin: 50px 0;
+    text-align: center;
+}
+.qualityText{
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: orange;
+}
+.playSection{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: left;
+    justify-content: space-between;
+}
+.rating{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.designText{
+    font-size: 27px;
+    margin: 10px 0;
+    padding: 5px 0;
+}
+.briefPara{
+    font-size: 16px;
+    color: gray;
+}
+.videoBtn{
+    background-color: green;
+    border: none;
+}

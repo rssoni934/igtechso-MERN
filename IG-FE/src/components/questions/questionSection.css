@@ -1,0 +1,41 @@
+.header{
+    text-align: center;
+    margin: 100px 0;
+}
+.questionSection{
+    padding: 50px 0;
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+}
+.questionDiv{
+    display: flex;
+    justify-content: center;
+}
+.tabs{
+    background-color: rgb(247, 248, 251);
+    border: none;
+    color: black;
+    border-radius: 0%;
+}
+
+.tabs:hover{
+    background-color: white;
+    border: none;
+    color: black
+}
+
+.tabs:active{
+    background-color: white;
+    border: none;
+    color: black
+}
+
+.selected-tab{
+    background-color: white;
+}
+
+.trailBtn{
+    background-color: rgb(252, 242, 232);
+    color: #EF9E48;
+}

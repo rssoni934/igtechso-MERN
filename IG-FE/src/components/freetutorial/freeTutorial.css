@@ -1,0 +1,13 @@
+.midtutorial{
+    margin: 0 120px; 
+    display: flex;
+    justify-content: center;
+}
+.mapp{
+    background-image: url("../../image/map.png");
+    padding: 20px
+}
+
+.carouselImg{
+
+}
